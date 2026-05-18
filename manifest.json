@@ -1,6 +1,6 @@
 {
     "name" : "ListClean",
-    "description" : "removes job internships you don't wanna see! easily blacklist them through extension popup",
+    "description" : "blacklist job internships you don't wanna see! easily through extension popup",
     "version" : "1.0",
     "manifest_version" : 3,
     "action" : {
@@ -16,7 +16,7 @@
     ],
     "content_scripts": [
     {
-        "matches": ["https://internshala.com/*"],
+        "matches": ["https://internshala.com/internships/*"],
         "js": ["scripts/content.js"]
     }
 ]
