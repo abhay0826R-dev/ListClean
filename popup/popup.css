@@ -1,0 +1,30 @@
+body {
+    height: fit-content;
+    width: fit-content;
+    background-color: #00171F;
+    color: #FEE9E1;
+    padding: 20px;
+}
+
+#container {
+    height: full;
+    width: full;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+h1 {
+    white-space: nowrap;
+}
+
+input {
+    background-color: #FEE9E1;
+    color: #00171F;
+    font-size: 25px;
+    font-weight: bold;
+    width: 150px;
+    height: 20px;
+    padding: 5px;
+}

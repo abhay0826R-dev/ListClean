@@ -3,10 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <h1>Hello Extension</h1>
-    <button id="removeInternshipBtn">Click</button>
+    <div id="container">
+        <h1>ListClean</h1>
+        <div>
+            <form onsubmit="addjob(event)">
+                <input type="text" placeholder="Blacklist">
+            </form>
+        </div>
+    </div>
 </body>
 <script src="popup.js"></script>
 </html>
