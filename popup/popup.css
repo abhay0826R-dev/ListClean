@@ -23,10 +23,6 @@ body {
     gap: 10px;
 }
 
-#active-container h3 {
-    color: #a3b3ff;
-}
-
 #container {
     height: fit-content;
     max-height: 500px;
@@ -140,7 +136,7 @@ h1 {
     flex: 1;
     background-color: transparent;
     color: #00171F;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     width: 150px;
     height: 20px;
@@ -224,12 +220,12 @@ h1 {
     font-weight: normal;
     margin: 0;
     background-color: rgb(213, 214, 215);
-    height: 30px;
+    height: 25px;
     width: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
+    border-radius: 40%;
 }
 #blocked-list-heading h6:hover {
     cursor: default;
@@ -360,7 +356,7 @@ footer {
     width: 65%;
     background-color: #00171F;
     padding: 10px 5px 10px 10px;
-    color: #aeb5bf;
+    color: #dddddd;
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -389,4 +385,12 @@ footer {
     font-size: 18px;
     font-weight: bold;
     font-style: italic;     
+}
+
+.red-activeText {
+    color: #F47174;
+}
+
+.blue-activeText {
+    color: #a3b3ff;
 }
