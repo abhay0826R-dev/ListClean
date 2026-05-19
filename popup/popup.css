@@ -359,7 +359,7 @@ footer {
     height: fit-content;
     width: 65%;
     background-color: #00171F;
-    padding: 10px 5px 10px 20px;
+    padding: 10px 5px 10px 10px;
     color: #aeb5bf;
     border-radius: 10px;
     display: flex;
