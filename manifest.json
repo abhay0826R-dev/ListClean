@@ -1,5 +1,5 @@
 {
-    "name" : "ListClean",
+    "name" : "InternShield",
     "description" : "blacklist job internships you don't wanna see! easily through extension popup",
     "version" : "1.0",
     "manifest_version" : 3,
