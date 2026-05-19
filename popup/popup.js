@@ -27,10 +27,15 @@ const activeText = document.getElementById("active-state-text")
 const overlayWarning = document.getElementById("site-warning-overlay")
 const overlayWarningReason = document.getElementById("overlay-warning-reason")
 
+const deletebtn = document.querySelectorAll(".delete-btn")
+deletebtn.forEach(elem => {
+    elem.addEventListener("click", function() {
+        elem.parentNode.remove()
+    })
+})
+
 // overlay blur warning 
 activeCheckbox.addEventListener("change", function() {
-console.log(activeText)
-
     if (activeCheckbox.checked) {
         extensionToggleOff()
     } else {
