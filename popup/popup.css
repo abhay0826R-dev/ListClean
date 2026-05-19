@@ -10,6 +10,7 @@ body {
 #header {
     background-color: #020618;
     width: 330px;
+    max-width: 330px;
     height: fit-content;
     display: flex;
     justify-content: space-between;
@@ -232,7 +233,7 @@ h1 {
 }
 
 #blocked-list {
-    box-shadow: 0 0 5px #d3d3d3;
+    box-shadow: 0 0 5px #0000005e;
     margin: 10px 10px;
 }
 
@@ -298,6 +299,28 @@ h1 {
 #blocked-keywords img {
     width: 10px;
     height: 10px;
+}
+/* width */
+#blocked-list ul::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  z-index: 2;
+}
+
+/* Track */
+#blocked-list ul::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+/* Handle */
+#blocked-list ul::-webkit-scrollbar-thumb {
+  background: #888;   
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+#blocked-list ul::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 footer {
