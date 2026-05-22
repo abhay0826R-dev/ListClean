@@ -19,6 +19,10 @@ async function getBlockedListLocal() {
 async function init() {
     BlockedList = await getBlockedListLocal()
     addBlockedListLocal()
+
+    // BlockedList.map((key, idx) => {
+    //     addKeywordUI(key)
+    // })
 }
 
 init()
@@ -80,21 +84,27 @@ blockedKeywordsList.addEventListener("click", function(event) {
 // input -> Enter and Plus Button function
 inputKeyword.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
-        addKeyword()
+        verifyKeywordAndAdd()
     }
 })
 
 // event listener for plus + button next to input
 addBtn.addEventListener("click", function() {
-    addKeyword()
+    verifyKeywordAndAdd()
 })
 
-// ADDS STUFF TO KEYWORD LIST
-function addKeyword() {
+function verifyKeywordAndAdd() {
     const keyValue = inputKeyword.value.trim()
-    if (keyValue !== "") {
+    if (keyValue !== "") {  
+        addKeywordUI(keyValue)
+        inputKeyword.value = ""
+    }
+}
+
+// ADDS STUFF TO KEYWORD LIST
+function addKeywordUI(keyword) {
     let newli = `<li class="keyword-item">
-                        <span>${keyValue}</span>
+                        <span>${keyword}</span>
                         <button class="delete-btn" aria-label="Delete">
                             <svg class="delete-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2h4a1 1 0 1 1 0 2h-1.069l-.867 12.142A2 2 0 0 1 17.069 22H6.93a2 2 0 0 1-1.995-1.858L4.07 8H3a1 1 0 0 1 0-2h4V4zm2 2h6V4H9v2zM6.074 8l.857 12H17.07l.857-12H6.074zM10 10a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1zm4 0a1 1 0 0 1 1 1v6a1 1 0 1 1-2 0v-6a1 1 0 0 1 1-1z" />
@@ -102,11 +112,9 @@ function addKeyword() {
                         </button>
                     </li>`
     blockedKeywordsList.insertAdjacentHTML("afterbegin", newli)
-    BlockedList.push(keyValue)
-    inputKeyword.value = ""
+    BlockedList.push(keyword)
     updateBlockedCount()
     addBlockedListLocal()
-    }
 }
 
 // overlay blur warning 
