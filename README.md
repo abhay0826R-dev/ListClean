@@ -1,4 +1,4 @@
-# ListClean 🛡️
+# InternShield 🛡️
 
 A sleek, lightweight, and privacy-focused Chrome Extension that automatically cleanses your web feeds by hiding posts containing user-specified blocked keywords, phrases, or companies. Say goodbye to low-quality content, unwanted spam, and zero-value posts.
 
